@@ -29,7 +29,7 @@
 {
     [super viewDidAppear:animated];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://88888888.angelxwind.net:8803/update_count"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://weareflame.co:8803/update_count"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     [request setHTTPMethod:@"POST"];
     [request setValue:@"1" forHTTPHeaderField:@"shouldSendCount"];
 
@@ -56,7 +56,7 @@
 {
     [_textField resignFirstResponder];
     if (_textField.text != nil) _count = _textField.text.integerValue;
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://88888888.angelxwind.net:8803/update_count"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://weareflame.co:8803/update_count"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     [request setHTTPMethod:@"POST"];
     [request setValue:@"0" forHTTPHeaderField:@"shouldSendCount"];
     [request setValue:[NSString stringWithFormat:@"%i", (int)_count] forHTTPHeaderField:@"count"];
